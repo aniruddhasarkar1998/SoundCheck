@@ -134,7 +134,7 @@ IGNORE
 
 rule names:
 syntax
-declarations
+configurations
 optionalDeclarations
 outFileName
 start

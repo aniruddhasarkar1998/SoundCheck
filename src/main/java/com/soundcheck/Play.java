@@ -1,14 +1,12 @@
 package com.soundcheck;
 
+import com.soundcheck.app.SoundCheckApplication;
 import com.soundcheck.launcher.Launcher;
 
-import javax.sound.sampled.LineUnavailableException;
-
 public class Play {
-    public static void main(String[] args) throws LineUnavailableException {
-        Launcher.play(
-                "C:\\Users\\Aniruddha Sarkar\\Documents\\github\\SoundCheck\\src\\test\\raag_files\\error_files_test\\mkm\\mkm1.raag",
-                true
-        );
-    }
+  public static void main(String[] args) {
+//    SoundCheckApplication.launch("com.soundcheck", Launcher::play,
+//        "src/test/raag_files/miyan_ki_malhar/test3/mkm.raag", true);
+		SoundCheckApplication.launch("com.soundcheck", Launcher::play, args[0], Boolean.parseBoolean(args[2]));
+  }
 }
